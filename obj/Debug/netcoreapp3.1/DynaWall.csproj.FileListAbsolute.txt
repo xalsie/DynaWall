@@ -11,3 +11,16 @@ C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\C#\DynaWall\obj\Debug\netcoreap
 C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\C#\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.dll
 C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\C#\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.pdb
 C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\C#\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.genruntimeconfig.cache
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\bin\Debug\netcoreapp3.1\DynaWall.exe
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\bin\Debug\netcoreapp3.1\DynaWall.deps.json
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\bin\Debug\netcoreapp3.1\DynaWall.runtimeconfig.json
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\bin\Debug\netcoreapp3.1\DynaWall.runtimeconfig.dev.json
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\bin\Debug\netcoreapp3.1\DynaWall.dll
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\bin\Debug\netcoreapp3.1\DynaWall.pdb
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.csprojAssemblyReference.cache
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.AssemblyInfoInputs.cache
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.AssemblyInfo.cs
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.csproj.CoreCompileInputs.cache
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.dll
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.pdb
+C:\Users\xalsi\OneDrive\Bureau\BOT\WallpaperDyna\DynaWall\obj\Debug\netcoreapp3.1\DynaWall.genruntimeconfig.cache

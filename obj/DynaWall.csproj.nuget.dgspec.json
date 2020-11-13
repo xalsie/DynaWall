@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\C#\\DynaWall\\DynaWall.csproj": {}
+    "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\DynaWall\\DynaWall.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\C#\\DynaWall\\DynaWall.csproj": {
+    "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\DynaWall\\DynaWall.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\C#\\DynaWall\\DynaWall.csproj",
+        "projectUniqueName": "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\DynaWall\\DynaWall.csproj",
         "projectName": "DynaWall",
-        "projectPath": "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\C#\\DynaWall\\DynaWall.csproj",
+        "projectPath": "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\DynaWall\\DynaWall.csproj",
         "packagesPath": "C:\\Users\\xalsi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\C#\\DynaWall\\obj\\",
+        "outputPath": "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\DynaWall\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

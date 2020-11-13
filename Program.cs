@@ -20,52 +20,149 @@ namespace change_Wallpaper2
         
         static void Main(string[] args)
         {
-            GetBackgroud();
+            DateTime thisDay = DateTime.Now;
+                WriteLog(@"C:\Users\xalsi\AppData\Local\Temp\DynaWall\", "------- " + thisDay.ToString("F") + " -------\n" + "#  START DynaWall", true);
+            
+            GetBackgroud(thisDay);
         }
 
-        public static void GetBackgroud()
+        public static void GetBackgroud(DateTime thisDay)
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "https://source.unsplash.com/random/1920x1080?hd,wallpapers"))
+                // using (var request = new HttpRequestMessage(new HttpMethod("GET"), "https://source.unsplash.com/random/1920x1080?hd,wallpapers"))
+
+                // 9276364
+                // 8485472
+                // 4670258
+                // 1413972
+                // 1339107
+
+                int[] TabCoolection = {9276364, 8485472, 4670258, 1413972, 1339107};
+
+                Random rnd = new Random();
+
+                var TadRndChoise = TabCoolection[rnd.Next(0, 4)];
+
+                Console.WriteLine("#######################\n\n   -> " + TadRndChoise + "\n\n#######################");
+
+                string uriR = "https://source.unsplash.com/collection/" + TadRndChoise + "/1920x1080";
+
+                Console.WriteLine(uriR);
+
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), uriR))
+
                 {
                     var response = httpClient.SendAsync(request).Result;
 
-                    Console.WriteLine(response.RequestMessage.RequestUri.AbsoluteUri);
+                    var TxtUri = "https://" + response.RequestMessage.RequestUri.Host + response.RequestMessage.RequestUri.AbsolutePath;
 
-                    Random rnd = new Random();
+                    Console.WriteLine(TxtUri);
 
-                    string localFilename = @"C:\Users\xalsi\AppData\Local\Temp\DynaWall\" + rnd.Next(1000, 9999) + ".bmp";
+                    // Random rnd = new Random();
+
+                    string path = @"C:\Users\xalsi\AppData\Local\Temp\DynaWall\";
+                    string localFilename = path + rnd.Next(1000, 9999) + ".bmp";
                     using (WebClient myWebClient = new WebClient())
                     {
+                        WriteLog(path, "Launch scan directory :", false);
+                            VerifPath(path);
+
                         try
                         {
-                            string[] BmpList = Directory.GetFiles(@"C:\Users\xalsi\AppData\Local\Temp\DynaWall", "*.bmp");
+                            string[] BmpList = Directory.GetFiles(path, "*.bmp");
 
                             // Delete source files that were copied.
-                            foreach (string i in BmpList)
-                            {
+                            foreach (string i in BmpList) {
                                 File.Delete(i);
+                                    WriteLog(path, "    -> Delete file : " + i, false);
                             }
-
                         }
                         catch (DirectoryNotFoundException dirNotFound)
                         {
-                            Console.WriteLine(dirNotFound.Message);
+                            // Console.WriteLine(dirNotFound.Message);
+                            WriteLog(path, dirNotFound.Message, false);
                         }
-                        
-                        myWebClient.DownloadFile(response.RequestMessage.RequestUri.AbsoluteUri, localFilename);
+                        finally
+                        {}
 
-                        RefreshWallpaper(localFilename);
+                        WriteLog(path, "\nImage Uri :\n" + "   -> " + TxtUri + "\n\nDownload image from Uri.\n", false);
+                            myWebClient.DownloadFile(TxtUri, localFilename);
+                        WriteLog(path, "Refresh Desktop WallPaper.", false);
+                            RefreshWallpaper(localFilename, path);
                     }
                 }
             }
         }
 
-        public static void RefreshWallpaper(string path)
+        public static void RefreshWallpaper(string localFilename, string path)
         {
-            SystemParametersInfo( 20, 0, path, 0x01 | 0x02 );
+            DateTime thisDay = DateTime.Now;
+            WriteLog(path, "\n#  STOP\n" + "------- " + thisDay.ToString("F") + " -------\n##################################################", false);
+                SystemParametersInfo( 20, 0, localFilename, 0x01 | 0x02 );
+        }
+
+        public static string VerifPath(string path)
+        {
+            string returnText = "";
+
+            try
+            {
+                if (Directory.Exists(path))
+                {
+                    Console.WriteLine("That path exists already.");
+                    Console.WriteLine("    -> " + path);
+
+                        returnText = "\n\n" + path;
+                        returnText += "\n    -> That path exists already.\n";
+
+                        Console.WriteLine(returnText);
+                    return returnText;
+                }
+
+                // Try to create the directory.
+                DirectoryInfo di = Directory.CreateDirectory(path);
+                // Console.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(path));
+
+                returnText = "\n\n" + path;
+                returnText += "\n    -> The directory was created successfully at " + Directory.GetCreationTime(path) + "\n";
+                return returnText;
+            }
+            catch (Exception e)
+            {
+                // Console.WriteLine("The process failed: {0}", e.ToString());
+                returnText = "The process failed: {0}" + e.ToString();
+                return returnText;
+            }
+            finally
+            {}
+        }
+
+        public static void WriteLog(string path, string TxtLog, bool verifpathbool = true)
+        {            
+            if (verifpathbool == true) {
+                TxtLog += VerifPath(path);
+            }
+
+            string LogFile = path + "log.txt";
+
+            if (!File.Exists(LogFile))
+            {
+                // Create a file to write to.
+                using (StreamWriter ct = File.CreateText(LogFile))
+                {
+                    ct.WriteLine(TxtLog);
+                    ct.Close();
+                }
+            }
+            else
+            {
+                using (StreamWriter sw = new StreamWriter(LogFile, true))
+                {
+                    sw.WriteLine(TxtLog);
+                    sw.Close();
+                }
+            }
         }
     }
 }
-
