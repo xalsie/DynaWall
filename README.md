@@ -2,6 +2,9 @@
 
 Description : Change your wallpaper when unlocking.
 
+## Version 1.0.11.14 (20 octo. 2020)
+    - [x] Adding new collections
+
 ## Version 1.0.11.13 (13 nov. 2020)
     - [x] Checking the temporary directory
     - [x] Get an image of the collection

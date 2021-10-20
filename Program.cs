@@ -32,13 +32,7 @@ namespace change_Wallpaper2
             {
                 // using (var request = new HttpRequestMessage(new HttpMethod("GET"), "https://source.unsplash.com/random/1920x1080?hd,wallpapers"))
 
-                // 9276364
-                // 8485472
-                // 4670258
-                // 1413972
-                // 1339107
-
-                int[] TabCoolection = {9276364, 8485472, 4670258, 1413972, 1339107};
+                int[] TabCoolection = {8680928, 11037116, 841333, 11635639, 18897794, 8253652, 1158549, 6805496, 1691032, 3802272, 3373312, 9468605, 2288557, 1905257, 4265857};
 
                 Random rnd = new Random();
 

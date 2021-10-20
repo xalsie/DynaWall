@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "azqvflgdaVNJpwaP4etL9Qd0hHnVf3064E8Z3ro1ry68pKN5SgeDBIRDL+jH8T8+mNI6ZOW77NdntrbLsuBkQA==",
+  "dgSpecHash": "EiFETgFVucIZ/fwRIFom6tMlNepXp/xeUEKfhYqf33rkM7FH85ZWCMfxUN8zMiK+KgoXKt4S2o0PKur+5RtmyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\xalsi\\OneDrive\\Bureau\\BOT\\WallpaperDyna\\DynaWall\\DynaWall.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\xalsi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
   "logs": []
 }
