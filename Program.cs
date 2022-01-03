@@ -36,7 +36,7 @@ namespace change_Wallpaper2
 
                 Random rnd = new Random();
 
-                var TadRndChoise = TabCoolection[rnd.Next(0, 4)];
+                var TadRndChoise = TabCoolection[rnd.Next(0, 16)];
 
                 Console.WriteLine("#######################\n\n   -> " + TadRndChoise + "\n\n#######################");
 
