@@ -32,6 +32,9 @@ namespace change_Wallpaper2
             {
                 // using (var request = new HttpRequestMessage(new HttpMethod("GET"), "https://source.unsplash.com/random/1920x1080?hd,wallpapers"))
 
+                // command for get image random of my collection
+                // https://api.unsplash.com/photos/random/?collections=DM-ZP4r2-zM&client_id=pKrtlVzEHxBBLYu3pgIxk68MP6KSMCpZVvyRQbRzrUI
+                
                 int[] TabCoolection = {8680928, 11037116, 841333, 11635639, 18897794, 8253652, 1158549, 6805496, 1691032, 3802272, 3373312, 9468605, 2288557, 1905257, 4265857};
 
                 Random rnd = new Random();
@@ -41,11 +44,13 @@ namespace change_Wallpaper2
                 Console.WriteLine("#######################\n\n   -> " + TadRndChoise + "\n\n#######################");
 
                 string uriR = "https://source.unsplash.com/collection/" + TadRndChoise + "/1920x1080";
+                // string uriR = "https://api.unsplash.com/photos/random/?collections=DM-ZP4r2-zM&client_id=pKrtlVzEHxBBLYu3pgIxk68MP6KSMCpZVvyRQbRzrUI";
+
+                // urls.raw
 
                 Console.WriteLine(uriR);
 
                 using (var request = new HttpRequestMessage(new HttpMethod("GET"), uriR))
-
                 {
                     var response = httpClient.SendAsync(request).Result;
 
